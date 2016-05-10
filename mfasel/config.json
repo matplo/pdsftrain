@@ -4,6 +4,11 @@
         {
             "NAME":"ClusterRef",
             "MACRO":"AddTaskClustersRef.C",
+            "STATUS":"Inactive"
+        },
+        {
+            "NAME":"ClusterRef",
+            "MACRO":"$ALICE_PHYSICS/PWGJE/EMCALJetTasks/macros/AddTaskEventFilter.C",
             "STATUS":"Active"
         }
     ] ,
@@ -12,6 +17,16 @@
     ],
     "pPb":
     [
+        {
+            "NAME":"ClusterRef",
+            "MACRO":"AddTaskClustersRef.C",
+            "STATUS":"Inactive"
+        },
+        {
+            "NAME":"eventFilter",
+            "MACRO":"$ALICE_PHYSICS/PWGJE/EMCALJetTasks/macros/AddTaskEventFilter.C",
+            "STATUS":"Active"
+        }
     ],
     "MC_PbPb":
     [
@@ -26,5 +41,15 @@
     ],
     "MC_pPb":
     [
+        {
+            "NAME":"ChargedParticlesRef",
+            "MACRO":"$ALICE_PHYSICS/PWGJE/EMCALJetTasks/macros/AddTaskChargedParticlesRefMC.C",
+            "STATUS":"Inactive"
+        },
+        {
+            "NAME":"EfficiencyEtaPhi",
+            "MACRO":"$ALICE_PHYSICS/PWGJE/EMCALJetTasks/macros/AddTaskEfficiencyEtaPhi.C",
+            "STATUS":"Active"
+        }
     ]
 }

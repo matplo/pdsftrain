@@ -2,9 +2,20 @@
     "PbPb":
     [
         {
-            "NAME":"EmcalPreparation",
-            "MACRO":"AddEmcalPreparationTasks.C",
-            "STATUS":"Active"
+            "NAME": "PhysicsSelection",
+            "MACRO": "$ALICE_PHYSICS/OADB/macros/AddTaskPhysicsSelection.C",
+            "STATUS": "Inactive"
+        },
+        {
+            "NAME":  "Multiplicity",
+            "MACRO": "$ALICE_PHYSICS/OADB/COMMON/MULTIPLICITY/macros/AddTaskMultSelection.C",
+            "ARGUMENTS" : "kFALSE",
+            "STATUS": "Inactive"
+        },
+        {
+            "NAME": "EmcalPreparation",
+            "MACRO": "AddEmcalPreparationTasks.C",
+            "STATUS": "Active"
         }
     ] ,
     "pp":
@@ -12,6 +23,22 @@
     ],
     "pPb":
     [
+          {
+            "NAME": "PhysicsSelection",
+            "MACRO": "$ALICE_PHYSICS/OADB/macros/AddTaskPhysicsSelection.C",
+            "STATUS": "Active"
+        },
+        {
+            "NAME":  "Multiplicity",
+            "MACRO": "$ALICE_PHYSICS/OADB/COMMON/MULTIPLICITY/macros/AddTaskMultSelection.C",
+            "ARGUMENTS" : "kFALSE",
+            "STATUS": "Active"
+        },
+        {
+            "NAME": "EmcalPreparation",
+            "MACRO": "AddEmcalPreparationTasks.C",
+            "STATUS": "Active"
+        }
     ],
     "MC_PbPb":
     [
@@ -21,5 +48,21 @@
     ],
     "MC_pPb":
     [
+        {
+            "NAME": "PhysicsSelection",
+            "MACRO": "$ALICE_PHYSICS/OADB/macros/AddTaskPhysicsSelection.C",
+            "STATUS": "Active"
+        },
+        {
+            "NAME":  "Multiplicity",
+            "MACRO": "$ALICE_PHYSICS/OADB/COMMON/MULTIPLICITY/macros/AddTaskMultSelection.C",
+            "ARGUMENTS" : "kFALSE",
+            "STATUS": "Inactive"
+        },
+        {
+            "NAME": "EmcalPreparation",
+            "MACRO": "AddEmcalPreparationTasks.C",
+            "STATUS": "Active"
+        }
     ]
 }

@@ -6,7 +6,7 @@ Created on 01.12.2015
 
 import os, time
 from train.steer.config import ConfigHandler
-from train.steer.submit import Submitter
+from train.steer.sample import Sample
 
 def GetTag():
     config = ConfigHandler.GetConfig()
@@ -29,26 +29,20 @@ def FindFiles(inputdir):
             result.append(os.path.join(os.path.abspath(mypath), f))
     return result
 
-def GetLists(mode):
-    filelists = []
-    trainroot = ConfigHandler.GetTrainRoot()
-    currentdir = os.path.join(trainroot, mode)
-    found = FindFiles(currentdir)
-    # strip away train root
-    for f in found:
-        test = f.replace(trainroot, "")
-        test = test.rstrip().lstrip()
-        if test[0] == "/":
-            filelists.append(test)
-    return filelists
-    
-def SubmitBatch(outputdir, jobtrainroot, filelist, splitlevel, chunks, user):
-    submitter = Submitter(filelist, jobtrainroot, outputdir, splitlevel)
-    if chunks >= 0:
-        submitter.SetNchunk(chunks)
-    submitter.SetUser(user)
-    submitter.Submit()
-        
 
+def GetSamplesForConfig(configname):
+    result = []
+    inputdir = os.path.join(ConfigHandler.GetTrainRoot(), "train", "config", "samples")
+    for mypath, midirs, myfiles in os.walk(inputdir):
+        for l in myfiles:
+            if str(l).startswith(configname):
+                result.append(Sample(os.path.join(mypath, l)))
+    return result
+    
+def DecodeSGEResponse(sgeresponse):
+    tokens = sgeresponse.split(" ")
+    runstring = tokens[2]
+    return int(runstring.split(".")[0])
+        
 def GetWorkdir(doGlobal):
     return os.path.join(ConfigHandler.GetConfig().GetTrainOutputPath(doGlobal), GetTag())

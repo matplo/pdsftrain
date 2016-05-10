@@ -1,0 +1,25 @@
+{
+    "PbPb":
+    [
+        {
+            "NAME":"EmcalInvariantMass",
+            "MACRO":"AddTaskEmcalInvariantMass.C",
+            "STATUS":"Inactive"
+        }
+    ] ,
+    "pp":
+    [
+    ],
+    "pPb":
+    [
+    ],
+    "MC_PbPb":
+    [
+    ],
+    "MC_pp":
+    [
+    ],
+    "MC_pPb":
+    [
+    ]
+}

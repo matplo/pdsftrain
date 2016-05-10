@@ -1,0 +1,9 @@
+*.pyc
+*.root
+*.d
+*.so
+*.swp
+.project
+.pydevproject
+build/
+/syswatch.log

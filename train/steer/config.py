@@ -44,6 +44,7 @@ class Config(object):
         self.__splitlevel               = -1
         self.__treename                 = ""
         self.__handlers                 = []
+        self.__mergesize                = 10
         if filename:
             self.Initialize(filename)
         
@@ -59,6 +60,8 @@ class Config(object):
                 self.__outputdir = v
             elif key == "SPLITLEVEL":
                 self.__splitlevel = v
+            elif key == "MERGE_CHUNKSIZE":
+                self.__mergesize = v
             elif key == "HANDLERS":
                 for en in v:
                     self.__handlers.append(str(en)) 
@@ -92,6 +95,9 @@ class Config(object):
     
     def GetHandlers(self):
         return self.__handlers
+    
+    def GetMergeSize(self):
+        return self.__mergesize
     
     def Print(self):
         print "Configuration:"

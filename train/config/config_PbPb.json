@@ -2,7 +2,7 @@
     "NAME" : "PbPb",
     "OUTPUT" : "/project/projectdirs/alice",
     "VERSION" : "V1",
-    "SPLITLEVEL" : 10,
+    "SPLITLEVEL" : 150,
     "HANDLERS": ["$ALICE_ROOT/ANALYSIS/macros/train/AddESDHandler.C"],
     "TREENAME": "esdTree"
 }

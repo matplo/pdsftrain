@@ -1,0 +1,26 @@
+{
+    "PbPb":
+    [
+        {
+            "NAME":"EmcalInvariantMass",
+            "MACRO":"AddTaskInvariantMass.C",
+            "SOURCES":["AliAnalysisTaskEmcalInvariantMass.cxx"],
+            "STATUS":"Active"
+        }
+    ] ,
+    "pp":
+    [
+    ],
+    "pPb":
+    [
+    ],
+    "MC_PbPb":
+    [
+    ],
+    "MC_pp":
+    [
+    ],
+    "MC_pPb":
+    [
+    ]
+}
